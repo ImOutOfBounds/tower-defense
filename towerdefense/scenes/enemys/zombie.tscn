@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://q7teof7gg5qe"]
+
+[ext_resource type="Script" path="res://scripts/zombie.gd" id="1_4jkhq"]
+[ext_resource type="Texture2D" uid="uid://dvn5l6f6nm1o0" path="res://icon.svg" id="1_i6mnc"]
+
+[node name="Zombie" type="Node2D"]
+script = ExtResource("1_4jkhq")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.316667, 1, 0, 1)
+texture = ExtResource("1_i6mnc")
