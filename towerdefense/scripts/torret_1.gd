@@ -12,6 +12,8 @@ func _process(delta: float) -> void:
 	if $RayCast2D.get_collider() and not isInTimer:
 		isInTimer = true
 		$Timer.start(1)
+	elif not $RayCast2D.get_collider() and not isInTimer:
+		$Timer.stop() 
 
 
 func _on_timer_timeout() -> void:

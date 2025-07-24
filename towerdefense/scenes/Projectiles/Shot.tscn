@@ -6,8 +6,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3lat4"]
 radius = 27.074
 
-[node name="Shot" type="Node2D"]
+[node name="Shot" type="Area2D"]
 z_index = 1
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_07x62")
 
 [node name="Icon" type="Sprite2D" parent="."]
@@ -15,11 +17,7 @@ modulate = Color(0.25, 1, 0, 1)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_dbkh5")
 
-[node name="StaticBody2D" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3lat4")
 
-[connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
