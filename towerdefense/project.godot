@@ -14,3 +14,12 @@ config/name="towerDefense"
 run/main_scene="res://scenes/level.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[layer_names]
+
+2d_render/layer_1="torrets"
+2d_render/layer_2="enemys"
+2d_render/layer_3="torrProj"
+2d_physics/layer_1="Torrets"
+2d_physics/layer_2="Enemys"
+2d_physics/layer_3="Projectiles"

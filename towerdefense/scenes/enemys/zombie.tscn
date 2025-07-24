@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://q7teof7gg5qe"]
+[gd_scene load_steps=4 format=3 uid="uid://q7teof7gg5qe"]
 
 [ext_resource type="Script" path="res://scripts/zombie.gd" id="1_4jkhq"]
 [ext_resource type="Texture2D" uid="uid://dvn5l6f6nm1o0" path="res://icon.svg" id="1_i6mnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2xx4"]
+size = Vector2(123, 120)
 
 [node name="Zombie" type="Node2D"]
 script = ExtResource("1_4jkhq")
@@ -9,3 +12,11 @@ script = ExtResource("1_4jkhq")
 [node name="Icon" type="Sprite2D" parent="."]
 modulate = Color(0.316667, 1, 0, 1)
 texture = ExtResource("1_i6mnc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_h2xx4")

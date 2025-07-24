@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwdxt2es5nxs2"]
+
+[ext_resource type="Texture2D" uid="uid://dvn5l6f6nm1o0" path="res://icon.svg" id="1_4kc23"]
+[ext_resource type="Script" path="res://scripts/inst_place.gd" id="2_xqnjo"]
+[ext_resource type="PackedScene" uid="uid://c03h45ggehvp5" path="res://scenes/torret/torret1.tscn" id="3_qi7ft"]
+
+[node name="InstPlace" type="TextureRect"]
+modulate = Color(0.98, 0.98, 0.196, 0.27451)
+texture = ExtResource("1_4kc23")
+script = ExtResource("2_xqnjo")
+plant = ExtResource("3_qi7ft")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
