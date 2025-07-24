@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="towerDefense"
+config/name="Chemical Duck"
+config/version="0.0.1.0"
 run/main_scene="res://scenes/level.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sprites/1000074698.png"
 
 [autoload]
 
