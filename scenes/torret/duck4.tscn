@@ -10,7 +10,7 @@ script = ExtResource("1_k6s72")
 bullet = ExtResource("2_7fp6a")
 
 [node name="Aim" type="Marker2D" parent="."]
-position = Vector2(128, 66)
+position = Vector2(230, -30)
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(150, 9)

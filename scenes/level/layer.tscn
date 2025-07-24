@@ -48,17 +48,20 @@ layout_mode = 2
 
 [node name="InstPlace2" parent="HBoxContainer" instance=ExtResource("3_hn3po")]
 layout_mode = 2
+flip_h = true
 
 [node name="InstPlace3" parent="HBoxContainer" instance=ExtResource("3_hn3po")]
 layout_mode = 2
 
 [node name="InstPlace4" parent="HBoxContainer" instance=ExtResource("3_hn3po")]
 layout_mode = 2
+flip_h = true
 
 [node name="InstPlace5" parent="HBoxContainer" instance=ExtResource("3_hn3po")]
 layout_mode = 2
 
 [node name="InstPlace6" parent="HBoxContainer" instance=ExtResource("3_hn3po")]
 layout_mode = 2
+flip_h = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

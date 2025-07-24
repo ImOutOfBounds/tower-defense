@@ -10,17 +10,31 @@ script = ExtResource("1_vhl7g")
 
 [node name="Hotbar" parent="." instance=ExtResource("2_n8je2")]
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -464.0
+offset_top = -237.0
+offset_right = 1919.0
+offset_bottom = 858.0
+color = Color(0.0014, 0.09842, 0.14, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -464.0
+offset_top = 111.0
+offset_right = 1919.0
+offset_bottom = 858.0
+color = Color(0.39, 0.0039, 0.04251, 1)
+
 [node name="Layer" parent="." instance=ExtResource("1_ex1bv")]
-position = Vector2(451, 100)
+position = Vector2(448, 172)
 
 [node name="Layer2" parent="." instance=ExtResource("1_ex1bv")]
-position = Vector2(451, 250)
+position = Vector2(448, 322)
 
 [node name="Layer3" parent="." instance=ExtResource("1_ex1bv")]
-position = Vector2(451, 400)
+position = Vector2(448, 472)
 
 [node name="Layer4" parent="." instance=ExtResource("1_ex1bv")]
-position = Vector2(451, 550)
+position = Vector2(448, 622)
 
 [node name="Layer5" parent="." instance=ExtResource("1_ex1bv")]
-position = Vector2(451, 700)
+position = Vector2(448, 772)
