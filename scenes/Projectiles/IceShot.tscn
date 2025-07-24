@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c683wtbcm3c8s"]
+
+[ext_resource type="Script" path="res://scripts/shot.gd" id="1_0wfb0"]
+[ext_resource type="Texture2D" uid="uid://bg3t5wx0ek8cm" path="res://sprites/1000074723s.png" id="2_istoe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3lat4"]
+radius = 27.074
+
+[sub_resource type="Gradient" id="Gradient_6uya0"]
+colors = PackedColorArray(0.84, 1, 0.976, 1, 0, 0.733333, 1, 1)
+
+[node name="Shot" type="Area2D"]
+z_index = 1
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_0wfb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3lat4")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0.627451)
+amount = 2000
+lifetime = 0.3
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 29.42
+gravity = Vector2(-300, 0)
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+color_ramp = SubResource("Gradient_6uya0")
+anim_speed_max = 87.35
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0.833333, 1, 1)
+position = Vector2(6, 0)
+scale = Vector2(0.57, 0.586667)
+texture = ExtResource("2_istoe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

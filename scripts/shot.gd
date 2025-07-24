@@ -3,6 +3,7 @@ extends Node2D
 
 func _physics_process(_delta: float) -> void:
 	position.x += 4
+	$Icon.rotate(.1)
 
 
 func _on_body_entered(body: Node2D) -> void:

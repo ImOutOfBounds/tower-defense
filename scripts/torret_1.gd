@@ -2,6 +2,7 @@ extends Node2D
 
 @export var bullet : PackedScene
 @onready var isInTimer = false
+@export var bulletTime : float = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -11,7 +12,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if $RayCast2D.get_collider() and not isInTimer:
 		isInTimer = true
-		$Timer.start(1)
+		$Timer.start(bulletTime)
 	elif not $RayCast2D.get_collider() and not isInTimer:
 		$Timer.stop() 
 
