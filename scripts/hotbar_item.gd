@@ -27,7 +27,7 @@ func update_modulate() -> void:
 		# Se o duckId for igual ao currentDuck, retorna à cor normal
 		self.modulate = Color(1, 1, 1)  # Cor normal (sem modulação)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Global.currentDuck != duckId:
 		self.modulate = Color(0.5, 0.5, 0.5)
 

@@ -4,7 +4,6 @@ extends TextureRect
 
 # Função chamada quando o input do usuário é detectado
 func _on_gui_input(event: InputEvent) -> void:
-	print(Global.currentDuck)
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			# Verifica se o id atual do pato está dentro do array
