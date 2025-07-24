@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://d274iv81isf2g"]
+
+[ext_resource type="Script" path="res://scripts/hotbar.gd" id="1_jhfni"]
+[ext_resource type="PackedScene" uid="uid://dkdwnisny52rw" path="res://scenes/ui/hotbarItem.tscn" id="2_7syf8"]
+[ext_resource type="Texture2D" uid="uid://b0wks8ce5q57q" path="res://sprites/1000074685.png" id="3_bn7bx"]
+[ext_resource type="Texture2D" uid="uid://b7lnv6dr73ydj" path="res://sprites/1000074690.png" id="4_t6xu1"]
+[ext_resource type="Texture2D" uid="uid://bhi1pu2guh8be" path="res://sprites/1000074694.png" id="5_d3o7i"]
+[ext_resource type="Texture2D" uid="uid://clhs8f5an4m2j" path="res://sprites/1000074698.png" id="6_8ktg7"]
+
+[node name="Hotbar" type="CanvasLayer"]
+script = ExtResource("1_jhfni")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = 542.0
+offset_bottom = 144.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HotbarItem" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
+layout_mode = 2
+spriteContent = ExtResource("3_bn7bx")
+costContent = 10
+duckId = 1
+
+[node name="HotbarItem2" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
+layout_mode = 2
+spriteContent = ExtResource("4_t6xu1")
+costContent = 15
+duckId = 2
+
+[node name="HotbarItem3" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
+layout_mode = 2
+spriteContent = ExtResource("5_d3o7i")
+costContent = 20
+duckId = 3
+
+[node name="HotbarItem4" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
+layout_mode = 2
+spriteContent = ExtResource("6_8ktg7")
+costContent = 20
+duckId = 4

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://np1tqdi0u0v2"]
+
+[ext_resource type="Script" path="res://scripts/torret_1.gd" id="1_6747l"]
+[ext_resource type="PackedScene" uid="uid://b3pv7irlkanal" path="res://scenes/Projectiles/Shot.tscn" id="2_jsnjn"]
+[ext_resource type="Texture2D" uid="uid://bhi1pu2guh8be" path="res://sprites/1000074694.png" id="3_y7au0"]
+
+[node name="Torret1" type="Node2D"]
+z_index = 1
+script = ExtResource("1_6747l")
+bullet = ExtResource("2_jsnjn")
+
+[node name="Aim" type="Marker2D" parent="."]
+position = Vector2(128, 66)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(150, 9)
+texture = ExtResource("3_y7au0")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(1994, 1)
+collision_mask = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

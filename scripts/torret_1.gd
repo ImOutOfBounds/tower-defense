@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if $RayCast2D.get_collider() and not isInTimer:
 		isInTimer = true
 		$Timer.start(1)
@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	print("marcao")
 	var new_instance = bullet.instantiate()
 	new_instance.position = $Aim.position
 	add_child(new_instance)

@@ -1,6 +1,5 @@
-extends Node2D
+extends CanvasLayer
 
-@onready var life = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,8 +7,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	position.x -= 1
-	
-	if life <= 0:
-		queue_free()
+func _process(delta: float) -> void:
+	pass

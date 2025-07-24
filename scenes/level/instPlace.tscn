@@ -1,16 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwdxt2es5nxs2"]
+[gd_scene load_steps=7 format=3 uid="uid://cwdxt2es5nxs2"]
 
-[ext_resource type="Texture2D" uid="uid://dvn5l6f6nm1o0" path="res://icon.svg" id="1_4kc23"]
+[ext_resource type="Texture2D" uid="uid://bgpkweym0ikaw" path="res://sprites/10000747022.png" id="1_xtu2j"]
 [ext_resource type="Script" path="res://scripts/inst_place.gd" id="2_xqnjo"]
-[ext_resource type="PackedScene" uid="uid://c03h45ggehvp5" path="res://scenes/torret/torret1.tscn" id="3_qi7ft"]
+[ext_resource type="PackedScene" uid="uid://c03h45ggehvp5" path="res://scenes/torret/duck1.tscn" id="3_qi7ft"]
+[ext_resource type="PackedScene" uid="uid://b6nt482bqikky" path="res://scenes/torret/duck2.tscn" id="4_aptcc"]
+[ext_resource type="PackedScene" uid="uid://np1tqdi0u0v2" path="res://scenes/torret/duck3.tscn" id="5_nj5n7"]
+[ext_resource type="PackedScene" uid="uid://desvuw83pbd04" path="res://scenes/torret/duck4.tscn" id="6_rjhkk"]
 
 [node name="InstPlace" type="TextureRect"]
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
-texture = ExtResource("1_4kc23")
+offset_right = 300.0
+offset_bottom = 156.0
+texture = ExtResource("1_xtu2j")
 script = ExtResource("2_xqnjo")
-plant = ExtResource("3_qi7ft")
+ducks = [ExtResource("3_qi7ft"), ExtResource("4_aptcc"), ExtResource("5_nj5n7"), ExtResource("6_rjhkk")]
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

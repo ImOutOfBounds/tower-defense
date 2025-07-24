@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkdwnisny52rw"]
+
+[ext_resource type="Texture2D" uid="uid://tntn4grbh13q" path="res://sprites/hotbarFrame.png" id="1_7c0f8"]
+[ext_resource type="Script" path="res://scripts/hotbar_item.gd" id="2_5w70r"]
+
+[node name="HotbarItem" type="TextureRect"]
+texture = ExtResource("1_7c0f8")
+script = ExtResource("2_5w70r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(67, 57)
+scale = Vector2(0.37, 0.386667)
+
+[node name="Cost" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 102.0
+offset_right = 87.0
+offset_bottom = 125.0
+text = "-"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
