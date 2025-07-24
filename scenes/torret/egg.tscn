@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://daabpjdihowwe"]
+
+[ext_resource type="Texture2D" uid="uid://chicptnpjbw0b" path="res://sprites/1000074749.png" id="1_hr37h"]
+[ext_resource type="Script" path="res://scripts/egg.gd" id="2_vc4te"]
+
+[node name="Egg" type="Sprite2D"]
+position = Vector2(38, 2)
+texture = ExtResource("1_hr37h")
+script = ExtResource("2_vc4te")
+
+[node name="Timer" type="Timer" parent="."]
