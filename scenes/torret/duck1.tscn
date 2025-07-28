@@ -9,6 +9,7 @@
 z_index = 1
 script = ExtResource("1_h7ilt")
 bullet = ExtResource("2_oovgn")
+cost = 50
 
 [node name="Aim" type="Marker2D" parent="."]
 position = Vector2(230, -30)

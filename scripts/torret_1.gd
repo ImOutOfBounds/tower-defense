@@ -3,6 +3,7 @@ extends Node2D
 @export var bullet : PackedScene
 @onready var isInTimer = false
 @export var bulletTime : float = 1
+@export var cost : int = 0
 var can_shoot : bool = false  # Só atira depois que o ovo for chocado
 
 func _ready() -> void:

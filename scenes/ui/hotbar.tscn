@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d274iv81isf2g"]
+[gd_scene load_steps=8 format=3 uid="uid://d274iv81isf2g"]
 
 [ext_resource type="Script" path="res://scripts/hotbar.gd" id="1_jhfni"]
 [ext_resource type="PackedScene" uid="uid://dkdwnisny52rw" path="res://scenes/ui/hotbarItem.tscn" id="2_7syf8"]
+[ext_resource type="Texture2D" uid="uid://biaq1w6g2t2le" path="res://sprites/hotbarFrame-1.png.png" id="2_m7i88"]
 [ext_resource type="Texture2D" uid="uid://b0wks8ce5q57q" path="res://sprites/1000074685.png" id="3_bn7bx"]
 [ext_resource type="Texture2D" uid="uid://b7lnv6dr73ydj" path="res://sprites/1000074690.png" id="4_t6xu1"]
 [ext_resource type="Texture2D" uid="uid://bhi1pu2guh8be" path="res://sprites/1000074694.png" id="5_d3o7i"]
@@ -22,6 +23,20 @@ offset_bottom = 144.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_m7i88")
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 99.0
+offset_right = 121.0
+offset_bottom = 122.0
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HotbarItem" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
