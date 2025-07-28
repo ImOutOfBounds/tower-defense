@@ -4,6 +4,7 @@ extends Node2D
 @onready var isInTimer = false
 @export var bulletTime : float = 1
 @export var cost : int = 0
+@export var isAtkDuck : bool = true
 var can_shoot : bool = false  # Só atira depois que o ovo for chocado
 
 func _ready() -> void:
@@ -12,7 +13,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	# Só atira se o sprite foi "ativado"
-	if can_shoot and $RayCast2D.get_collider() and not isInTimer:
+	if can_shoot and ($RayCast2D.get_collider() or not isAtkDuck) and not isInTimer:
 		isInTimer = true
 		$Timer.start(bulletTime)
 	elif not $RayCast2D.get_collider() and not isInTimer:
