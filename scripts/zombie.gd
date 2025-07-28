@@ -11,7 +11,7 @@ func _ready() -> void:
 	start_bobbing_animation()
 
 func _process(_delta: float) -> void:
-	position.x -= 1
+	position.x -= .5
 	
 	if life <= 0:
 		queue_free()

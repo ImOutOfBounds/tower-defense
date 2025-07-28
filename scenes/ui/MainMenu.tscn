@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cs2278qmra8nj"]
+
+[ext_resource type="PackedScene" uid="uid://dqqmsw6mqa3p2" path="res://scenes/ui/Button.tscn" id="1_7mtir"]
+[ext_resource type="Texture2D" uid="uid://clhs8f5an4m2j" path="res://sprites/1000074698.png" id="1_hgphj"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_inbbr"]
+[ext_resource type="Texture2D" uid="uid://bhi1pu2guh8be" path="res://sprites/1000074694.png" id="3_o21om"]
+[ext_resource type="Texture2D" uid="uid://b7lnv6dr73ydj" path="res://sprites/1000074690.png" id="4_b26mm"]
+[ext_resource type="Texture2D" uid="uid://b0wks8ce5q57q" path="res://sprites/1000074685.png" id="5_ogjnb"]
+[ext_resource type="Texture2D" uid="uid://xqovwvj210mn" path="res://sprites/1000074745.png" id="6_84g4x"]
+[ext_resource type="Texture2D" uid="uid://c0n5ii4yd5sil" path="res://sprites/1000074737.png" id="7_ea4nh"]
+[ext_resource type="Texture2D" uid="uid://chicptnpjbw0b" path="res://sprites/1000074749.png" id="8_fo2eb"]
+[ext_resource type="Texture2D" uid="uid://3oxenb8l02nx" path="res://sprites/1000074741.png" id="9_vhwjo"]
+
+[node name="MainMenu" type="Node2D"]
+position = Vector2(194, 327)
+script = ExtResource("1_inbbr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" parent="VBoxContainer" instance=ExtResource("1_7mtir")]
+layout_mode = 2
+text = "PLAY"
+
+[node name="Button2" parent="VBoxContainer" instance=ExtResource("1_7mtir")]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="Button3" parent="VBoxContainer" instance=ExtResource("1_7mtir")]
+layout_mode = 2
+text = "CREDITS"
+
+[node name="Button4" parent="VBoxContainer" instance=ExtResource("1_7mtir")]
+layout_mode = 2
+text = "QUIT"
+
+[node name="1000074698" type="Sprite2D" parent="."]
+position = Vector2(1530, 150)
+texture = ExtResource("1_hgphj")
+
+[node name="1000074694" type="Sprite2D" parent="."]
+position = Vector2(1489, 557)
+texture = ExtResource("3_o21om")
+flip_h = true
+
+[node name="1000074690" type="Sprite2D" parent="."]
+position = Vector2(990, -142)
+texture = ExtResource("4_b26mm")
+flip_h = true
+
+[node name="1000074685" type="Sprite2D" parent="."]
+position = Vector2(1200, 353)
+texture = ExtResource("5_ogjnb")
+
+[node name="1000074745" type="Sprite2D" parent="."]
+position = Vector2(978, 172)
+texture = ExtResource("6_84g4x")
+
+[node name="1000074737" type="Sprite2D" parent="."]
+position = Vector2(-18, 453)
+texture = ExtResource("7_ea4nh")
+
+[node name="1000074749" type="Sprite2D" parent="."]
+position = Vector2(1536, -146)
+texture = ExtResource("8_fo2eb")
+
+[node name="1000074741" type="Sprite2D" parent="."]
+position = Vector2(813, 558)
+texture = ExtResource("9_vhwjo")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]

@@ -9,7 +9,7 @@
 z_index = 1
 script = ExtResource("1_h7ilt")
 bullet = ExtResource("2_shy7k")
-bulletTime = 10.0
+bulletTime = 5.0
 cost = 50
 isAtkDuck = false
 

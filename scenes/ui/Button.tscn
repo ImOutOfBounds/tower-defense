@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqqmsw6mqa3p2"]
+
+[ext_resource type="Texture2D" uid="uid://bw2r0w3p38tws" path="res://sprites/btnInactive.png" id="1_ugqtf"]
+[ext_resource type="Texture2D" uid="uid://dbmtlt2n8wgsw" path="res://sprites/btn1Pressed.png" id="2_x8rbv"]
+[ext_resource type="Texture2D" uid="uid://clm8y6lr02ead" path="res://sprites/btn1.png" id="3_idbn8"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="4_edrhf"]
+
+[node name="Button" type="TextureButton"]
+texture_normal = ExtResource("1_ugqtf")
+texture_pressed = ExtResource("2_x8rbv")
+texture_hover = ExtResource("3_idbn8")
+script = ExtResource("4_edrhf")
+
+[node name="RichTextLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your Text Here"
+horizontal_alignment = 1
+vertical_alignment = 1
