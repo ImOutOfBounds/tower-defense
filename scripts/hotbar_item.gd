@@ -13,6 +13,7 @@ func set_duck_info(new_sprite : Texture, new_cost : int) -> void:
 	cost = new_cost
 	spriteContent = new_sprite
 	costContent = new_cost
+	$Cost.text = str(cost)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

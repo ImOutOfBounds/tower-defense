@@ -41,23 +41,23 @@ vertical_alignment = 1
 [node name="HotbarItem" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
 spriteContent = ExtResource("3_bn7bx")
-costContent = 10
+costContent = 50
 duckId = 1
 
 [node name="HotbarItem2" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
 spriteContent = ExtResource("4_t6xu1")
-costContent = 15
+costContent = 100
 duckId = 2
 
 [node name="HotbarItem3" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
 spriteContent = ExtResource("5_d3o7i")
-costContent = 20
+costContent = 125
 duckId = 3
 
 [node name="HotbarItem4" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
 spriteContent = ExtResource("6_8ktg7")
-costContent = 20
+costContent = 75
 duckId = 4
