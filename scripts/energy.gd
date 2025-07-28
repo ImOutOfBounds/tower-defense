@@ -1,13 +1,22 @@
 extends Area2D
 
+var tween_started := false
+var target_position := Vector2.ZERO
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT)
+	var direction = Vector2(randf_range(-3.0, 3.0) * 50, randf_range(-3.0, 3.0) * 50)
+	# Calcula a posição final (mais alta e para o lado)
+	target_position = global_position + Vector2(direction)
+	# Começa a animação de posição
+	tween.tween_property(self, "global_position", target_position, 0.5)
+	tween_started = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# Você pode adicionar lógica extra aqui se quiser algo contínuo
 	pass
 
 

@@ -6,7 +6,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var time = randi_range(5, 10)
+	var time = randi_range(20, 30)
 	$Timer.start(time)
 
 

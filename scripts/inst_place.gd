@@ -16,5 +16,6 @@ func _on_gui_input(event: InputEvent) -> void:
 				add_child(new_instance)  # Adiciona o pato à cena
 				haveDuck = true
 				Global.nrg -= new_instance.cost
+				Global.currentDuck = 0
 			else:
 				print("ID do pato fora do alcance!")
