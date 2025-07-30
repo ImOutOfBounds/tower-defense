@@ -1,27 +1,29 @@
-extends Node2D
+extends CharacterBody2D
 
 @onready var life = 100
 @onready var tween := create_tween()
+@onready var baseSpeed = Vector2(50, 0)
+@onready var currentSpeed = baseSpeed
 
-# Posição original no eixo Y
 var base_y : float
 
 func _ready() -> void:
 	base_y = position.y
 	start_bobbing_animation()
 
-func _process(_delta: float) -> void:
-	position.x -= .5
-	
+func _physics_process(delta: float) -> void:
+	# move_and_slide move o personagem com colisão
+	velocity = -currentSpeed
+	move_and_slide()
+
 	if life <= 0:
 		queue_free()
 
-# Faz o objeto "subir e descer" no eixo Y a cada 1 segundo
 func start_bobbing_animation() -> void:
-	var duration = 0.5  # meio segundo para subir e meio para descer = 1s no total
-	var offset = 10     # altura do movimento (pode ajustar)
+	var duration = 0.5
+	var offset = 10
 
-	tween.set_loops()  # repete infinitamente
+	tween.set_loops()
 
 	tween.tween_property(self, "position:y", base_y - offset, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "position:y", base_y, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)

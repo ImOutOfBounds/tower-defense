@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bn5igy4b6wnso" path="res://sprites/1000074718.png" id="2_7rk33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2xx4"]
-size = Vector2(123, 177)
+size = Vector2(123, 101)
 
 [node name="Zombie" type="CharacterBody2D"]
 collision_layer = 2
@@ -15,5 +15,5 @@ script = ExtResource("1_4jkhq")
 texture = ExtResource("2_7rk33")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -11.5)
+position = Vector2(-0.5, -7.5)
 shape = SubResource("RectangleShape2D_h2xx4")

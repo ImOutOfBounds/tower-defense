@@ -14,10 +14,10 @@ script = ExtResource("1_jhfni")
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 16.0
-offset_top = 15.0
-offset_right = 542.0
-offset_bottom = 144.0
+offset_left = 20.0
+offset_top = 21.0
+offset_right = 546.0
+offset_bottom = 150.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 0
