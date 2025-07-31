@@ -2,4 +2,4 @@ extends Node
 
 
 var currentDuck = 0
-var nrg =  50
+var nrg =  9999

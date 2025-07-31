@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6nt482bqikky"]
+[gd_scene load_steps=8 format=3 uid="uid://b6nt482bqikky"]
 
 [ext_resource type="Script" path="res://scripts/torret_1.gd" id="1_3nruu"]
 [ext_resource type="Resource" uid="uid://bkpuxbjqntjvi" path="res://resources/FreezeDuck.tres" id="2_gtyn4"]
@@ -6,10 +6,27 @@
 [ext_resource type="PackedScene" uid="uid://daabpjdihowwe" path="res://scenes/torret/egg.tscn" id="4_almwr"]
 [ext_resource type="Texture2D" uid="uid://3oxenb8l02nx" path="res://sprites/1000074741.png" id="5_3q7d8"]
 
-[node name="Torret1" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyin0"]
+size = Vector2(43, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x25kr"]
+size = Vector2(15, 104)
+
+[node name="Duck2" type="StaticBody2D"]
 z_index = 1
 script = ExtResource("1_3nruu")
 data = ExtResource("2_gtyn4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(203.5, 28.5)
+shape = SubResource("RectangleShape2D_cyin0")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(234.5, 29)
+shape = SubResource("RectangleShape2D_x25kr")
 
 [node name="Aim" type="Marker2D" parent="."]
 position = Vector2(230, -30)
@@ -28,5 +45,6 @@ collision_mask = 2
 position = Vector2(154, 2)
 texture = ExtResource("5_3q7d8")
 
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="cracked" from="Egg" to="." method="_on_egg_cracked"]

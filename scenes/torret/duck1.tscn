@@ -11,7 +11,7 @@ size = Vector2(43, 105)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rafnj"]
 size = Vector2(15, 104)
 
-[node name="Torret1" type="StaticBody2D"]
+[node name="Duck1" type="StaticBody2D"]
 z_index = 1
 script = ExtResource("1_h7ilt")
 data = ExtResource("2_jyth8")
