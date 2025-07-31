@@ -1,45 +1,48 @@
 extends Node2D
 
-@export var bullet : PackedScene
-@onready var isInTimer = false
-@export var bulletTime : float = 1
-@export var cost : int = 0
-@export var isAtkDuck : bool = true
-@onready var life : float = 100
-@onready var isBeingAtk : bool = false
+@export var data: Duck  # resource externo
 
-var can_shoot : bool = false  # Só atira depois que o ovo for chocado
+@onready var isInTimer: bool = false
+@onready var isBeingAtk: bool = false
+@onready var currentLife: float = 0  # valor interno que copia o do resource
+
+var can_shoot: bool = false  # Só atira depois que o ovo for chocado
 
 func _ready() -> void:
-	# Oculta o Sprite2D no início
 	$Icon.visible = false
+	if data != null:
+		currentLife = data.life
+	else:
+		push_warning("PlantData não foi atribuído!")
 
 func _process(_delta: float) -> void:
-	# Só atira se o sprite foi "ativado"
-	if life <= 0:
+	if currentLife <= 0:
 		queue_free()
+
 	if isBeingAtk:
-		life -= 0.5
-	if can_shoot and ($RayCast2D.get_collider() or not isAtkDuck) and not isInTimer:
+		currentLife -= 0.5
+
+	if not data:
+		return
+
+	if can_shoot and ($RayCast2D.get_collider() or not data.isAtkDuck) and not isInTimer:
 		isInTimer = true
-		$Timer.start(bulletTime)
+		$Timer.start(data.bulletTime)
 	elif not $RayCast2D.get_collider() and not isInTimer:
 		$Timer.stop()
 
 func _on_timer_timeout() -> void:
-	if not can_shoot:
+	if not can_shoot or not data:
 		return
 
-	var new_instance = bullet.instantiate()
+	var new_instance = data.bullet.instantiate()
 	new_instance.position = $Aim.position
 	add_child(new_instance)
 	isInTimer = false
 
-# Conectado ao sinal "cracked" emitido pelo ovo
 func _on_egg_cracked() -> void:
 	can_shoot = true
 	$Icon.visible = true
 
-
-func _on_hitbox_body_entered(body: Node2D) -> void:
+func _on_hitbox_body_entered(_body: Node2D) -> void:
 	isBeingAtk = true

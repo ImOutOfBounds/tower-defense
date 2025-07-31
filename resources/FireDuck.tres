@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Duck" load_steps=4 format=3 uid="uid://booaip81lt2ve"]
+
+[ext_resource type="PackedScene" uid="uid://b3pv7irlkanal" path="res://scenes/Projectiles/FireShot.tscn" id="1_fioqr"]
+[ext_resource type="Script" path="res://resources/duck.gd" id="1_xkj15"]
+[ext_resource type="Texture2D" uid="uid://bhi1pu2guh8be" path="res://sprites/1000074694.png" id="2_gm2bo"]
+
+[resource]
+script = ExtResource("1_xkj15")
+bullet = ExtResource("1_fioqr")
+bulletTime = 0.7
+cost = 125
+isAtkDuck = true
+life = 100.0
+spriteContent = ExtResource("2_gm2bo")
+duckId = 3

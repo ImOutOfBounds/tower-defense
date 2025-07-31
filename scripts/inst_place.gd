@@ -12,10 +12,10 @@ func _on_gui_input(event: InputEvent) -> void:
 			# Instancia a cena
 			var new_instance = selected_duck.instantiate()
 			# Verifica se o id atual do pato está dentro do array
-			if Global.currentDuck > 0 and not haveDuck and Global.nrg - new_instance.cost >= 0:
+			if Global.currentDuck > 0 and not haveDuck and Global.nrg - new_instance.data.cost >= 0:
 				add_child(new_instance)  # Adiciona o pato à cena
 				haveDuck = true
-				Global.nrg -= new_instance.cost
+				Global.nrg -= new_instance.data.cost
 				Global.currentDuck = 0
 			else:
 				print("ID do pato fora do alcance!")

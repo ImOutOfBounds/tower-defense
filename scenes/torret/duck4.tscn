@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://desvuw83pbd04"]
 
 [ext_resource type="Script" path="res://scripts/torret_1.gd" id="1_k6s72"]
-[ext_resource type="PackedScene" uid="uid://bv00pr4n80ion" path="res://scenes/Projectiles/GreenShot.tscn" id="2_mmwq7"]
+[ext_resource type="Resource" uid="uid://dcofloqvy26sh" path="res://resources/ChemicalDuck.tres" id="2_n05p5"]
 [ext_resource type="Texture2D" uid="uid://clhs8f5an4m2j" path="res://sprites/1000074698.png" id="3_iidwv"]
 [ext_resource type="PackedScene" uid="uid://daabpjdihowwe" path="res://scenes/torret/egg.tscn" id="4_vn6tn"]
 [ext_resource type="Texture2D" uid="uid://xqovwvj210mn" path="res://sprites/1000074745.png" id="5_j0rki"]
@@ -9,9 +9,7 @@
 [node name="Torret1" type="Node2D"]
 z_index = 1
 script = ExtResource("1_k6s72")
-bullet = ExtResource("2_mmwq7")
-bulletTime = 1.5
-cost = 75
+data = ExtResource("2_n05p5")
 
 [node name="Aim" type="Marker2D" parent="."]
 position = Vector2(230, -30)

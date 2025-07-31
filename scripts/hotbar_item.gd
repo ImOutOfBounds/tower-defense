@@ -3,40 +3,36 @@ extends TextureRect
 @onready var sprite = $Sprite2D
 @onready var cost = 0
 
-@export var spriteContent : Texture
-@export var costContent : int = 0
-@export var duckId : int = 0
+@export var data: Duck  # Agora o recurso contendo todos os dados
 
-# Função para configurar o sprite e o custo externamente
-func set_duck_info(new_sprite : Texture, new_cost : int) -> void:
-	sprite.texture = new_sprite
-	cost = new_cost
-	spriteContent = new_sprite
-	costContent = new_cost
+# Função para configurar o sprite e o custo com base no Resource
+func set_duck_info(data: Duck) -> void:
+	if data == null:
+		push_error("Recurso Duck não atribuído!")
+		return
+
+	sprite.texture = data.spriteContent
+	cost = data.cost
 	$Cost.text = str(cost)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if spriteContent != null and costContent != 0:
-		set_duck_info(spriteContent, costContent)
-	# Inicializa a modulação de cor de acordo com o estado de currentDuck
+	if data:
+		set_duck_info(data)
 	update_modulate()
 
-# Função para atualizar a modulação com base no Global.currentDuck
+# Função para atualizar a cor com base no pato selecionado
 func update_modulate() -> void:
-	if Global.currentDuck == duckId:
-		# Se o duckId for igual ao currentDuck, retorna à cor normal
-		self.modulate = Color(1, 1, 1)  # Cor normal (sem modulação)
+	if data and Global.currentDuck == data.duckId:
+		self.modulate = Color(1, 1, 1)  # Normal
 
 func _process(_delta: float) -> void:
-	if Global.currentDuck != duckId:
-		self.modulate = Color(0.5, 0.5, 0.5)
+	if data and Global.currentDuck != data.duckId:
+		self.modulate = Color(0.5, 0.5, 0.5)  # Desativado
 
-# Função chamada no clique do botão do mouse
+# Quando clicado
 func _on_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and Global.nrg >= costContent:
-			# Atualiza o ID do pato global ao clicar
-			Global.currentDuck = duckId
-			# Atualiza a modulação da cor
-			update_modulate()  # Vai aplicar a cor correta com base no estado atual
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if data and Global.nrg >= data.cost:
+			Global.currentDuck = data.duckId
+			update_modulate()

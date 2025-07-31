@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/hotbar.gd" id="1_jhfni"]
 [ext_resource type="PackedScene" uid="uid://dkdwnisny52rw" path="res://scenes/ui/hotbarItem.tscn" id="2_7syf8"]
 [ext_resource type="Texture2D" uid="uid://biaq1w6g2t2le" path="res://sprites/hotbarFrame-1.png.png" id="2_m7i88"]
-[ext_resource type="Texture2D" uid="uid://b0wks8ce5q57q" path="res://sprites/1000074685.png" id="3_bn7bx"]
-[ext_resource type="Texture2D" uid="uid://b7lnv6dr73ydj" path="res://sprites/1000074690.png" id="4_t6xu1"]
-[ext_resource type="Texture2D" uid="uid://bhi1pu2guh8be" path="res://sprites/1000074694.png" id="5_d3o7i"]
-[ext_resource type="Texture2D" uid="uid://clhs8f5an4m2j" path="res://sprites/1000074698.png" id="6_8ktg7"]
+[ext_resource type="Resource" uid="uid://rdohsd3c4d5w" path="res://resources/YellowDuck.tres" id="4_r3y5m"]
+[ext_resource type="Resource" uid="uid://booaip81lt2ve" path="res://resources/FireDuck.tres" id="5_m36vs"]
+[ext_resource type="Resource" uid="uid://bkpuxbjqntjvi" path="res://resources/FreezeDuck.tres" id="6_twiwv"]
+[ext_resource type="Resource" uid="uid://dcofloqvy26sh" path="res://resources/ChemicalDuck.tres" id="7_1vwdh"]
 
 [node name="Hotbar" type="CanvasLayer"]
 script = ExtResource("1_jhfni")
@@ -40,24 +40,16 @@ vertical_alignment = 1
 
 [node name="HotbarItem" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-spriteContent = ExtResource("3_bn7bx")
-costContent = 50
-duckId = 1
+data = ExtResource("4_r3y5m")
 
 [node name="HotbarItem2" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-spriteContent = ExtResource("4_t6xu1")
-costContent = 100
-duckId = 2
+data = ExtResource("5_m36vs")
 
 [node name="HotbarItem3" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-spriteContent = ExtResource("5_d3o7i")
-costContent = 125
-duckId = 3
+data = ExtResource("6_twiwv")
 
 [node name="HotbarItem4" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-spriteContent = ExtResource("6_8ktg7")
-costContent = 75
-duckId = 4
+data = ExtResource("7_1vwdh")

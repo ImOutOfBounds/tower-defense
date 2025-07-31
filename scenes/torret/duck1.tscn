@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c03h45ggehvp5"]
 
 [ext_resource type="Script" path="res://scripts/torret_1.gd" id="1_h7ilt"]
-[ext_resource type="PackedScene" uid="uid://b0hnypd1rexjo" path="res://scenes/collectibles/Energy.tscn" id="2_shy7k"]
+[ext_resource type="Resource" uid="uid://rdohsd3c4d5w" path="res://resources/YellowDuck.tres" id="2_jyth8"]
 [ext_resource type="Texture2D" uid="uid://b0wks8ce5q57q" path="res://sprites/1000074685.png" id="3_3fkh7"]
 [ext_resource type="PackedScene" uid="uid://daabpjdihowwe" path="res://scenes/torret/egg.tscn" id="4_r13t0"]
 
@@ -14,10 +14,7 @@ size = Vector2(15, 104)
 [node name="Torret1" type="StaticBody2D"]
 z_index = 1
 script = ExtResource("1_h7ilt")
-bullet = ExtResource("2_shy7k")
-bulletTime = 5.0
-cost = 50
-isAtkDuck = false
+data = ExtResource("2_jyth8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(203.5, 28.5)
