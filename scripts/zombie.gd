@@ -12,7 +12,10 @@ func _ready() -> void:
 	start_bobbing_animation()
 
 func _physics_process(delta: float) -> void:
-	# move_and_slide move o personagem com colisão
+	if Global.isPaused:
+		velocity = Vector2.ZERO  # Parado
+		return  # Ignora o resto do código se estiver pausado
+
 	velocity = -currentSpeed
 	move_and_slide()
 
@@ -24,6 +27,5 @@ func start_bobbing_animation() -> void:
 	var offset = 10
 
 	tween.set_loops()
-
 	tween.tween_property(self, "position:y", base_y - offset, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "position:y", base_y, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)

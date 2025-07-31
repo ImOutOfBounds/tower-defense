@@ -5,30 +5,45 @@ extends TextureRect
 
 @export var data: Duck  # Agora o recurso contendo todos os dados
 
-# Função para configurar o sprite e o custo com base no Resource
-func set_duck_info(data: Duck) -> void:
-	if data == null:
+# Configura o slot com os dados do pato
+func set_duck_info(new_data: Duck) -> void:
+	if new_data == null:
 		push_error("Recurso Duck não atribuído!")
 		return
 
+	data = new_data
 	sprite.texture = data.spriteContent
 	cost = data.cost
 	$Cost.text = str(cost)
+	update_modulate()
 
-# Called when the node enters the scene tree for the first time.
+# Limpa o slot
+func clear_duck() -> void:
+	data = null
+	sprite.texture = null
+	cost = 0
+	$Cost.text = ""
+	update_modulate()
+
+# Retorna true se o slot estiver vazio
+func is_empty() -> bool:
+	return data == null
+
+# Atualiza a cor com base no pato selecionado
+func update_modulate() -> void:
+	if data and Global.currentDuck == data.duckId:
+		self.modulate = Color(1, 1, 1)
+	else:
+		self.modulate = Color(0.5, 0.5, 0.5)
+
 func _ready() -> void:
 	if data:
 		set_duck_info(data)
-	update_modulate()
-
-# Função para atualizar a cor com base no pato selecionado
-func update_modulate() -> void:
-	if data and Global.currentDuck == data.duckId:
-		self.modulate = Color(1, 1, 1)  # Normal
+	else:
+		clear_duck()  # Garante que esteja limpo se não tiver dado
 
 func _process(_delta: float) -> void:
-	if data and Global.currentDuck != data.duckId:
-		self.modulate = Color(0.5, 0.5, 0.5)  # Desativado
+	update_modulate()
 
 # Quando clicado
 func _on_gui_input(event: InputEvent) -> void:

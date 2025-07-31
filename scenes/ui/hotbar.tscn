@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d274iv81isf2g"]
+[gd_scene load_steps=9 format=3 uid="uid://d274iv81isf2g"]
 
 [ext_resource type="Script" path="res://scripts/hotbar.gd" id="1_jhfni"]
+[ext_resource type="Script" path="res://resources/duck.gd" id="2_3ij5o"]
 [ext_resource type="PackedScene" uid="uid://dkdwnisny52rw" path="res://scenes/ui/hotbarItem.tscn" id="2_7syf8"]
 [ext_resource type="Texture2D" uid="uid://biaq1w6g2t2le" path="res://sprites/hotbarFrame-1.png.png" id="2_m7i88"]
 [ext_resource type="Resource" uid="uid://rdohsd3c4d5w" path="res://resources/YellowDuck.tres" id="4_r3y5m"]
@@ -10,6 +11,7 @@
 
 [node name="Hotbar" type="CanvasLayer"]
 script = ExtResource("1_jhfni")
+ducks = Array[ExtResource("2_3ij5o")]([ExtResource("4_r3y5m"), ExtResource("6_twiwv"), ExtResource("5_m36vs"), ExtResource("7_1vwdh")])
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -40,16 +42,12 @@ vertical_alignment = 1
 
 [node name="HotbarItem" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-data = ExtResource("4_r3y5m")
 
 [node name="HotbarItem2" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-data = ExtResource("5_m36vs")
 
 [node name="HotbarItem3" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-data = ExtResource("6_twiwv")
 
 [node name="HotbarItem4" parent="Control/HBoxContainer" instance=ExtResource("2_7syf8")]
 layout_mode = 2
-data = ExtResource("7_1vwdh")

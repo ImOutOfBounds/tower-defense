@@ -1,0 +1,188 @@
+[gd_scene load_steps=10 format=3 uid="uid://dg46iigpybaql"]
+
+[ext_resource type="Script" path="res://scripts/select_duck_screen.gd" id="1_7hec2"]
+[ext_resource type="PackedScene" uid="uid://cwyc1gaxx40sc" path="res://scenes/ui/DuckRosterItem.tscn" id="1_g8dhm"]
+[ext_resource type="Resource" uid="uid://dcofloqvy26sh" path="res://resources/ChemicalDuck.tres" id="2_1nib4"]
+[ext_resource type="Resource" uid="uid://rdohsd3c4d5w" path="res://resources/YellowDuck.tres" id="2_jpfm1"]
+[ext_resource type="Resource" uid="uid://bkpuxbjqntjvi" path="res://resources/FreezeDuck.tres" id="3_dj2a4"]
+[ext_resource type="Resource" uid="uid://booaip81lt2ve" path="res://resources/FireDuck.tres" id="4_06s3n"]
+[ext_resource type="Texture2D" uid="uid://bhafu730n14y0" path="res://sprites/smallBtn.png" id="6_8bnw8"]
+[ext_resource type="Texture2D" uid="uid://pp1ovfua2yq2" path="res://sprites/smallBtnClick.png" id="7_o6nlk"]
+[ext_resource type="Texture2D" uid="uid://di7taxmdxtjy8" path="res://sprites/smallBtnHover.png" id="8_8hb11"]
+
+[node name="SelectDuckScreen" type="CanvasLayer"]
+script = ExtResource("1_7hec2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.427451)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -394.0
+offset_top = -830.0
+offset_right = 394.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DuckRosterItem" parent="VBoxContainer/HBoxContainer" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+data = ExtResource("2_jpfm1")
+
+[node name="DuckRosterItem2" parent="VBoxContainer/HBoxContainer" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+data = ExtResource("3_dj2a4")
+
+[node name="DuckRosterItem3" parent="VBoxContainer/HBoxContainer" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+data = ExtResource("4_06s3n")
+
+[node name="DuckRosterItem4" parent="VBoxContainer/HBoxContainer" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+data = ExtResource("2_1nib4")
+
+[node name="DuckRosterItem5" parent="VBoxContainer/HBoxContainer" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem6" parent="VBoxContainer/HBoxContainer" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DuckRosterItem" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem2" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem3" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem4" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem5" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem6" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DuckRosterItem" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem2" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem3" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem4" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem5" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem6" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DuckRosterItem" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem2" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem3" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem4" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem5" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem6" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DuckRosterItem" parent="VBoxContainer/HBoxContainer5" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem2" parent="VBoxContainer/HBoxContainer5" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem3" parent="VBoxContainer/HBoxContainer5" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem4" parent="VBoxContainer/HBoxContainer5" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem5" parent="VBoxContainer/HBoxContainer5" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem6" parent="VBoxContainer/HBoxContainer5" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DuckRosterItem" parent="VBoxContainer/HBoxContainer6" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem2" parent="VBoxContainer/HBoxContainer6" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem3" parent="VBoxContainer/HBoxContainer6" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem4" parent="VBoxContainer/HBoxContainer6" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem5" parent="VBoxContainer/HBoxContainer6" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="DuckRosterItem6" parent="VBoxContainer/HBoxContainer6" instance=ExtResource("1_g8dhm")]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1491.0
+offset_top = 930.0
+offset_right = 1791.0
+offset_bottom = 1030.0
+texture_normal = ExtResource("6_8bnw8")
+texture_pressed = ExtResource("7_o6nlk")
+texture_hover = ExtResource("8_8hb11")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 292.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 37
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

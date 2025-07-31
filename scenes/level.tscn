@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d67ytyupxg37"]
+[gd_scene load_steps=6 format=3 uid="uid://d67ytyupxg37"]
 
 [ext_resource type="PackedScene" uid="uid://cqguu6my57xbb" path="res://scenes/level/layer.tscn" id="1_ex1bv"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_vhl7g"]
 [ext_resource type="PackedScene" uid="uid://d274iv81isf2g" path="res://scenes/ui/hotbar.tscn" id="2_n8je2"]
 [ext_resource type="AudioStream" uid="uid://cdpa7i6gptmar" path="res://songs/5738757499781120.wav" id="4_tgc5e"]
+[ext_resource type="PackedScene" uid="uid://dg46iigpybaql" path="res://scenes/ui/SelectDuckScreen.tscn" id="5_dxglr"]
 
 [node name="Level" type="Node2D"]
 position = Vector2(457, 228)
@@ -36,3 +37,5 @@ position = Vector2(448, 772)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_tgc5e")
 autoplay = true
+
+[node name="SelectDuckScreen" parent="." instance=ExtResource("5_dxglr")]
