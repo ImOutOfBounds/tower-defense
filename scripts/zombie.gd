@@ -12,7 +12,7 @@ func _ready() -> void:
 	start_bobbing_animation()
 
 func _physics_process(delta: float) -> void:
-	if Global.isPaused:
+	if Global.gamePaused:
 		velocity = Vector2.ZERO  # Parado
 		return  # Ignora o resto do código se estiver pausado
 
