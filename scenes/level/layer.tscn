@@ -9,7 +9,7 @@ script = ExtResource("1_k66nc")
 enemy = ExtResource("2_qesm7")
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(1486, -50)
+position = Vector2(1023, -21)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 8
