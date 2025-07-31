@@ -46,3 +46,6 @@ func _on_egg_cracked() -> void:
 
 func _on_hitbox_body_entered(_body: Node2D) -> void:
 	isBeingAtk = true
+
+func _on_hitbox_body_exited(body: Node2D) -> void:
+	isBeingAtk = false

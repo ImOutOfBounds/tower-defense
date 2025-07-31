@@ -46,5 +46,6 @@ position = Vector2(148, -5)
 texture = ExtResource("5_rw7je")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="cracked" from="Egg" to="." method="_on_egg_cracked"]
